@@ -15,41 +15,8 @@ The Anime Dataset used in this project contains data from 1963 to 2023, featurin
 **Score:** User rating of the anime
 **Popularity:** Popularity rank based on community votes
 
-## Code Explaination
-
-#### Installing Libraries and Data Loading:
-```{python}
-import pandas as pd
-import matplotlib.pyplot as plt
-
-data_path = "C:/Users/rajpu/Downloads/animes_dataset.csv"
-anime_df = pd.read_csv(data_path)
 
 
-```
-#### Exploratory Data Analysis and Preprocessing:
-```{python}
-# Display the first few rows of the dataset
-anime_df.head()
-
-# Check for any missing values in the dataset
-missing_values = anime_df.isnull().sum()
-
-# Fill missing values in relevant columns
-anime_df['genre'] = anime_df['genre'].fillna('Unknown')
-
-
-
-```
-
-#### Data Visualization:
-```{python}
-# Plot the distribution of anime genres
-anime_df['genre'].value_counts().plot(kind='bar', figsize=(10,5))
-plt.title("Distribution of Anime Genres")
-plt.xlabel("Genres")
-plt.ylabel("Count")
-plt.show()
 
 
 
